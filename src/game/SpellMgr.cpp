@@ -3805,6 +3805,9 @@ void SpellMgr::LoadSpellCustomAttr()
                 spellInfo->EffectImplicitTargetA[0] = 6;
                 spellInfo->EffectMiscValue[0] = 21;
                 break;
+			case 17347:
+				spellInfo->procFlags &= ~PROC_FLAG_TAKEN_NEGATIVE_SPELL_HIT; //https://github.com/Looking4Group/L4G_Core/issues/2592
+				spellInfo->procFlags &= ~PROC_FLAG_TAKEN_AOE_SPELL_HIT;
             default:
                 break;
         }
